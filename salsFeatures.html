@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Features </title>
+    <link rel="stylesheet" href="./style/shared.css">
+    <link rel="stylesheet" href="./style/satoshi.css">
+    <link rel="stylesheet" href="./style/salesFeatures.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="pageContainer">
+        <div class="contentDescription">
+            <div class="discoverMessage">
+                <button class="button discoverBtn"> <i class="fa-solid fa-wand-sparkles"></i>Discover </button>
+            </div>
+            <div class="discoverTitle">
+                <h2>Explore Sales'IQ Featuers</h2>
+            </div>
+            <div class="discoverText">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum pariatur numquam totam, ex, architecto non modi dolore enim doloribus sint accusamus inventore iusto ea molestiae maiores a libero assumenda laboriosam?
+                Eveniet possimus nam ipsam eos veniam ipsa optio magni quis placeat dolor culpa, odit distinctio labore quo quod error natus velit ipsum ratione exercitationem accusamus? Beatae, molestiae! Consequatur, alias modi.
+                Nisi ipsa labore neque reiciendis quidem voluptatibus beatae laborum facilis id, quos est consectetur delectus modi officiis blanditiis ducimus praesentium voluptas temporibus atque soluta error quasi veniam voluptatum quam? Vel!
+            </div>
+            <div class="discoverButton">
+                <button class="exploreButton">
+                    
+                    Explore Features
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chartContainer">
+            <div class="chart">
+                <header class="header">
+                    <div class="part1">
+                    <button type="button" class="target"><i class="fa-solid fa-bullseye"></i></button>
+                    <p >Most Orders</p>
+                    </div>
+                    
+                    <button type="button" class="dots"><i class="fa-solid fa-ellipsis"></i></button>
+                </header>
+                <main class="main">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                      </div>
+                      
+                      
+                      <script>
+                        const ctx = document.getElementById('myChart');
+                      
+                        new Chart(ctx, {
+                          type: 'doughnut',
+                          data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Purple'],
+                            datasets: [{
+                              label: 'pourcentage',
+                              data: [40, 15, 15, 20 ],
+                              borderWidth: 2,
+                              borderRadius: 20, 
+                            }]
+                          },
+                          options: {
+                            curvature:1,
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                      </script>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

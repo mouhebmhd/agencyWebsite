@@ -1,0 +1,99 @@
+.mainContainer
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+    .column
+    {
+        width: 30%;
+        height: 95%;
+        padding: 10px;
+
+    }
+        .box
+        {
+            width: 80%;
+            height: 250px;
+            background-color: var(--whiteGray);
+            border-radius: 25px;
+            margin-bottom: 10px;
+            padding: 10px;
+             display: flex;
+            flex-direction: column;
+            row-gap: 10px; 
+            margin: auto; 
+            margin-bottom: 10px;
+        }
+        
+       
+            .boxIcon
+            {
+
+            }
+                .iconContainer
+                {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #10984C;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 25px;
+                    color: #fff;
+                }
+            .boxTitle
+            {
+                font-weight: 600;
+            }
+                .columnOne .box:nth-child(2) .boxIcon .iconContainer
+                {
+                    background-color: #F4B433;    
+                }
+                .columnTwo .box:first-child .boxIcon .iconContainer
+                {
+                    background-color:#F9480C ;
+                }
+                .columnTwo .box:nth-child(2) .boxIcon .iconContainer
+                {
+                    background-color: #6066ED;
+                }
+                .columnTwo .box:nth-child(3) .boxIcon .iconContainer
+                {
+                    background-color: #FE894D;
+                }
+                .iconContainer i 
+                {
+                    color: rgba(255, 255, 255,0.8);
+                }
+            .columnTwo>.box 
+            {
+                height: fit-content;
+                padding: 20px;
+            }
+            .columnThree .box
+            {
+                height: 250px;
+                margin: 0;
+            }
+            .columnThree
+            {
+                display: flex;
+                flex-direction: column; /*verticale*/
+                /*start    center    end */
+                justify-content: end;
+                row-gap:15px;
+                align-items: center;
+            }
+                .columnThree .box:first-child .boxIcon .iconContainer
+                {
+                    background-color: #028FF9;
+                }
+                .columnThree .box:last-child .boxIcon .iconContainer
+                {
+                    background-color: #00BFFA;
+                }

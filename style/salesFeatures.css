@@ -1,0 +1,96 @@
+.pageContainer
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+    .contentDescription
+    {
+        padding: 15px;
+        width: 45%;
+    }
+            .discoverText
+            {
+                line-height: 1.75;
+            }
+            .discoverBtn
+            {
+                background-color: #F2EEFB;
+                color: var(--primaryColor);
+                border: none;
+                padding: 10px;
+                border-radius:15px ;
+                width: 125px;
+            }
+                .discoverBtn i 
+                {
+                    margin-inline:5px;
+                }
+                .exploreButton
+                {
+                    padding: 15px;
+                    border: none;
+                    background-color: var(--primaryColor);
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 15px;
+                }
+                .exploreButton  i
+                {
+                    margin-inline: 5px;
+                    /*margin-inline: margin-right+margin-left   margin-block=margin-top+margin-bottom*/
+                }
+    .chartContainer
+    {
+        width: 52vw;
+        height: 100vh;
+        background-color: #edecec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        .chart
+        {
+            background-color: #fff;
+            width: 75%;
+            height: 80%;
+            border-radius: 20px;
+            padding: 15px;
+        }
+            .header
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .part1
+            {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+            .header p
+            {
+                font-size: var(--textSize4);
+                font-weight: 500;
+            }
+                .header button
+                {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    background-color: #e0e0e0;
+                    border: none;
+                    color: #656565;
+                }
+        #myChart
+        {
+            height: 100% !important;
+            width: 110% !important;
+        }
+        .main
+        {
+            display: flex;
+            justify-content: center;
+        }

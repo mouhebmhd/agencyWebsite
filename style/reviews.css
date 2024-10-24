@@ -1,0 +1,144 @@
+.container
+{
+    width:100%;
+    height: 100%;
+    
+}
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        row-gap: 15px;
+
+    }
+        .headerTitle
+        {
+            width: 50%;
+            text-align: center;
+            font-size: var(--textSize5);
+            font-weight: 600;
+        }
+        .headerText
+        {
+            text-align: center;
+            width: 75%;
+            font-size: var(--textSize2);
+            line-height: 1.7;
+        }
+    .cardsContainer
+    {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+        .card
+        {
+            border: 1px solid #e2e2e2;
+            width: 30%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+            .commentAuthor
+            {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+             .authorPhoto
+            {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: rebeccapurple;
+                background-size: contain;
+            }
+            .card:nth-child(1) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar1.jpg") ;
+            }
+            .card:nth-child(2) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar2.jpg") ;
+            }
+            .card:nth-child(3) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar3.jpg") ;
+            }
+            .card:nth-child(4) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar4.jpg") ;
+            }
+            .card:nth-child(5) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar2.jpg") ;
+            }
+            .card:nth-child(6) .authorPhoto
+            {
+                background-image: url("../assets/icons/avatar1.jpg") ;
+            }
+        .card 
+        {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        .hiddenCard
+        {
+            display: none;
+        }
+            .commentText
+            {
+                color: #a8a8a8;color: #a8a8a8;
+                font-weight: 500;
+            } 
+            .authorInfos p
+            {
+                color: #a8a8a8;
+                position: relative;
+                top: -10px;
+            }
+            .hiddenStar
+            {
+                display: none !important;
+            }
+            .commentRating i
+            {
+                color: #FFC107;
+            }
+    .button
+    {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--primaryColor);
+    }
+    .footer
+    {
+        display: flex;
+        justify-content: center; 
+        column-gap: 15px;
+    }
+        .footer .button:first-child
+        {
+    
+            background-color: #fff;
+        }
+        .footer .button:last-child
+        {
+            background-color: var(--primaryColor);
+        }
+        .footer .button i 
+        {
+            font-size: var(--textSize2);
+        }
+        .footer .button:first-child i 
+        {
+            color: var(--primaryColor) !important;
+        }
+        .footer .button:last-child i 
+        {
+            color: #fff !important;
+        }

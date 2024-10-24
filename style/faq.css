@@ -1,0 +1,136 @@
+@import url("shared.css");
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .header
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        row-gap: 10px;
+    }
+        .description
+        {
+            width: 75%;
+            text-align: center;
+           /*  line-height:2;   space between lines
+            letter-spacing: 10px;   space between letters
+         */
+         /* word-spacing: 15px; space between words */
+        }
+    .questions
+    {
+        margin-top: 25px;
+        padding: 10px;
+    }
+        .questionContainer
+        {
+            background-color: var(--whiteGray);
+            padding: 10px;
+            border-radius: 5px;
+            width: 80vw;
+        }
+        .singleQuestion 
+        {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+            button
+            {
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            button img
+            {
+                width: 30px;
+                height: 30px;
+            }
+            .questionText
+            {
+                font-size: var(--textSize3);
+                font-weight: 500;
+            }
+          
+            .response {
+           height: fit-content;
+            }
+            
+            .show {
+                max-height: fit-content; /* Set this to a maximum reasonable height */
+            }
+            
+            .hide {  
+             
+                max-height: 0;
+                overflow: hidden;
+            }
+    .listOfQuestions
+    {
+        margin-top: 15px;
+        width: 81vw;
+        height: fit-content;
+    }
+        .modalQuestion
+        {
+            display: grid;
+            grid-template-areas: 
+            "questionTxt  questionIcons"
+            "questionResponse  questionResponse"
+            ;
+            grid-template-rows: 0.75fr 2fr;
+            grid-template-columns: 19fr 1fr;
+            margin-bottom: 2px;
+          
+        }
+        .questionTxt
+        {
+            grid-area:questionTxt ;
+            font-size: var(--textSize3);
+            font-weight: 600;
+        }
+        .questionIcons
+        {
+            grid-area:questionIcons ;
+        }
+            .questionIcons>button>i
+            {
+                font-size: var(--textSize3);
+            }
+            .hiddenIcon
+            {
+                display: none;
+            }
+            .visisbleIcon
+            {
+                display: block;
+            }
+        .questionResponse
+        {
+            grid-area: questionResponse;
+            line-height: 1.8;
+            transition-duration:5s;
+            transition-property: max-height;
+            max-height: 500px;     
+            overflow: hidden;
+            transition-timing-function: linear;
+            background-color: #f7f7f7;
+            padding: 5px;
+        }
+        .hiddenResponse
+        {
+            max-height: 0px;
+      
+        }
+        .visibleResponse
+        {
+            display: block;
+        }
+    

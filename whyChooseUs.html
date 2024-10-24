@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Features </title>
+    <link rel="stylesheet" href="./style/shared.css">
+    <link rel="stylesheet" href="./style/satoshi.css">
+    <link rel="stylesheet" href="./style/whyChoose.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="pageContainer">
+    <header class="header">
+      <div class="headerTitle">
+        Why Choose SalesIQ?  
+      </div>
+      <div class="headerText">
+        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, illo. consectetur adipisicing elit. Ab non architecto enim explicabo neque, nulla excepturi. Eos totam tenetur quod?
+      </div>
+    </header>
+    <main class="main">
+      <div class="chart">
+        <div class="chartContainer">
+          <div class="chartHeader">
+            <div class="iconContainer">
+              <i class="icon fa-solid fa-chart-line"></i>
+            </div>
+            <div class="iconText">Monthly Analysis</div>
+          </div>
+          <div class="chartInfos">
+            <div class="amount">
+              <span class="amountText"> &dollar; 23,200</span><sub>Earned</sub>
+            </div>
+            <div class="chartLabel">
+              <div class="colorSquare"></div>
+              <p>Total Price</p>
+            </div>
+          </div>
+        </div>
+        <div class="chartPlot">
+          <canvas id="myChart"></canvas>
+          <script>
+            var ctx = document.getElementById("myChart");
+            const DATA_COUNT = 7;
+            const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100}; // You can define NUMBER_CFG however you need.
+          
+            const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+            const data = {
+              labels: labels,
+              datasets: [
+                {
+                  label: '',
+                  data: [65, 59, 80, 81, 56, 55, 40], // Replace with actual data
+                  backgroundColor: '#6366F1', // Red color
+                },
+                {
+                  label: '',
+                  data: [28, 48, 40, 19, 86, 27, 90], // Replace with actual data
+                  backgroundColor: '#D7B9FF', // Blue color
+                },
+                {
+                  label: '',
+                  data: [18, 48, 77, 9, 100, 27, 40], // Replace with actual data
+                  backgroundColor: '#E6D9F3', // Green color
+                },
+              ]
+            };
+          
+            new Chart(ctx, {
+              type: "bar",
+              data: data,
+              options: {
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Monthly Chart'
+                  },
+                },
+                responsive: true,
+                borderRadius:10,
+                scales: {
+                  x: {
+                    stacked: true,
+                  },
+                  y: {
+                    stacked: true
+                  }
+                }
+              }
+            });
+          </script>
+          <div class="chartPopUp">
+            <div class="line">
+              <div class="colorSquare"></div>
+              <div class="lineText">40.233</div>
+              <div class="growthValue">+1.5%</div>
+            </div>
+            <div class="line">
+              <div class="colorSquare"></div>
+              <div class="lineText">40.233</div>
+              <div class="growthValue">-2.8%</div>
+            </div>
+            <div class="line">
+              <div class="colorSquare"></div>
+              <div class="lineText">40.233</div>
+              <div class="growthValue">+3.4%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content"></div>
+    </main>
+  </div>
+</body>
+<script src="./scripts/growthValue.js"></script>
+</html>

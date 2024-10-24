@@ -1,0 +1,164 @@
+@import url("./shared.css");
+.container
+{
+    width: 100%;
+    height: 100%;
+}
+    .header
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        margin-top: -25px;
+        
+    }
+        .logo img 
+        {
+            width: 125px;
+            height: 125px;
+            margin-top: 30px;
+        }
+        .nav ul 
+        {
+            display: flex;
+            list-style-type: none;
+            column-gap: 12px;
+            font-size: var(--textSize2);
+        }
+        .nav .nav-item a 
+        {
+            text-decoration: none;
+            color: var(--quadrinaryColor);
+            border: 3px solid transparent;
+            
+        }
+        .nav .nav-item a:hover
+        {
+            font-weight: 600;
+            color: var(--primaryColor);
+            text-decoration-color: var(--primaryColor);
+            text-decoration-line: underline;
+            text-decoration-thickness: 2px ;
+            text-underline-offset: 10px;
+        }
+            i
+            {
+                margin-right: 7.5px;
+            }
+    .buttons>button
+    {
+        width: 150px;
+        height: 50px;
+        border: none;
+        outline:none;
+        background-color: transparent;
+        font-size: var(--textSize2);
+        border-radius: 25px;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+    }
+        .buttons>button:nth-child(1)
+        {
+            color: var(--primaryColor);
+
+        }
+        .buttons>button:last-child
+        {
+            background-color: var(--primaryColor);
+            color: #fff;
+        }
+        .buttons>button:first-child:hover 
+        {
+            border: 1px solid var(--primaryColor);
+        }
+        .buttons>button:last-of-type:hover
+        {
+            background-color: #494aac;
+        }
+        .buttons>button:hover 
+        {
+            cursor: pointer;
+        }
+    .main
+    {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .mainText
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;   
+         row-gap: 20px;
+    }
+        main .mainText .textTitle{
+            font-size: 50px;  
+            font-weight: 600;
+            text-align: center;
+            width: 50%;
+            
+        }
+            span
+            {
+                color: var(--primaryColor);
+            }
+        
+        main .textDescription{
+            color: rgb(153, 153, 153);
+            font-size: var(--textSize2);
+        }
+        main button
+        {
+            width: 200px;
+            height: 50px;
+            background-color: var(--primaryColor);
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: var(--textSize2);
+            border-radius: 25px;
+        }
+        .main button i 
+        {
+            margin-left: 7.5px;
+        }
+        .main button i
+        {
+            animation-name: flip360;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .main .mainImage>img 
+        {
+            width: 750px;
+            height: 350px;
+            border-radius: 25px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 10px 2px #1a1919;
+        }
+
+@keyframes flip360 {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

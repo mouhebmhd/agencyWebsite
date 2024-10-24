@@ -1,0 +1,24 @@
+:root
+{
+    --primaryColor:#6366F1;
+    --secondaryColor:#FE8A4D;
+    --tertiaryColor:#35353d;
+    --quadrinaryColor:#575757;
+    --whiteGray:rgb(238, 238, 238);
+    --textSize1:16px;
+    --textSize2:18px;
+    --textSize3:20px;
+    --textSize4:22px;
+    --textSize5:36px;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body:not(i)
+{
+    font-family: "Satoshi-Variable" !important; 
+}

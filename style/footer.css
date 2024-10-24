@@ -1,0 +1,226 @@
+.pageContainer
+{
+    width: 100%;
+    height: 100%;
+}
+    .main
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+        .photoContainer
+        {
+            width: 80%;
+            height: 300px;
+            border-radius: 25px;
+            background-image: url("../assets/images/bg.jpg");
+            background-size: cover;
+            
+        }
+            .content
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: rgba(0, 0, 0,0.6);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 10px;
+            }
+                .contentTitle
+                {
+                    font-size: var(--textSize5);
+                    color: #fff;
+                    font-weight: 500;
+                    width: 60%;
+                    text-transform: lowercase;
+                    text-align: center;
+                }
+                .text::first-letter
+                {
+                    text-transform: uppercase;
+                    color: red;
+                }
+                .contentText
+                {
+                    font-size: var(--textSize2);
+                    color: #fff;
+                    width: 70%;
+                    text-align: center;
+                }
+                .buttonContainer
+                {
+                    margin-top: 10px;
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;                    
+                }
+                    .buttonContainer>button
+                    {
+                        width: fit-content; 
+                        padding: 15px;
+                        border-radius: 30px;
+                        font-size: var(--textSize1);
+                        border: none;
+                        background-color: var(--primaryColor);
+                        color: #fff;
+                        font-weight: 500;
+                    }
+                    .buttonContainer>button>i
+                    {
+                        margin-left: 12px;
+                        animation-name: rotateIcon;
+                        animation-duration: 5s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+    .footer
+    {
+      background-color: #000;
+        height: calc(50% - 10px);
+        margin-top: 10px;
+        color: #fff;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        .nav
+        {
+            width: 90%;
+            height:  80%;
+            justify-content: space-around;
+            align-items: center;
+            display: grid;
+            grid-template-areas: 
+            "Product Company1 Company2 Ressources Developers"
+            "Features1 Features2 Features3 Features4 Features5"
+            "Integrations1 Integrations2 Integrations3 Integrations4 Integrations5"
+            "Pricing1 Pricing2 Pricing3 Pricing4 Pricing5"
+            "Changelog1 Changelog2 Changelog3 Changelog4 Changelog5"
+            ;
+            grid-template-columns: /* 1fr 1fr 1fr 1fr 1fr */ repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);
+        }
+        .nav div:nth-child(1)
+        {
+            grid-area: Product;
+        }
+        .nav div:nth-child(2)
+        {
+            grid-area: Company1;
+        }
+        .nav div:nth-child(3)
+        {
+            grid-area: Company2;
+        }
+        .nav div:nth-child(4)
+        {
+            grid-area: Ressources;
+        }
+        .nav div:nth-child(5)
+        {
+            grid-area: Developers;
+        }
+        .nav div:nth-child(6)
+        {
+            grid-area: Features1;
+        }
+        .nav div:nth-child(7)
+        {
+            grid-area: Features2;
+        }
+        .nav div:nth-child(8)
+        {
+            grid-area: Features3;
+        }
+        .nav div:nth-child(9)
+        {
+            grid-area: Features4;
+        }
+        .nav div:nth-child(10)
+        {
+            grid-area: Features5;
+        }
+        .nav div:nth-child(11)
+        {
+            grid-area: Integrations1;
+        }
+        .nav div:nth-child(12)
+        {
+            grid-area: Integrations2;
+        }
+        .nav div:nth-child(13)
+        {
+            grid-area: Integrations3;
+        }
+        .nav div:nth-child(14)
+        {
+            grid-area: Integrations4;
+        }
+        .nav div:nth-child(15)
+        {
+            grid-area: Integrations5;
+        }
+        .nav div:nth-child(16)
+        {
+            grid-area: Pricing1;
+        }
+        .nav div:nth-child(17)
+        {
+            grid-area: Pricing2;
+        }
+        .nav div:nth-child(18)
+        {
+            grid-area: Pricing3;
+        }
+        .nav div:nth-child(19)
+        {
+            grid-area: Pricing4;
+        }
+        .nav div:nth-child(20)
+        {
+            grid-area: Pricing5;
+        }
+        .nav div:nth-child(21)
+        {
+            grid-area: Changelog1;
+        }
+        .nav div:nth-child(22)
+        {
+            grid-area: Changelog2;
+        }
+        .nav div:nth-child(23)
+        {
+            grid-area: Changelog3;
+        }
+        .nav div:nth-child(24)
+        {
+            grid-area: Changelog4;
+        }
+        .nav div:nth-child(25)
+        {
+            grid-area: Changelog5;
+        }
+        .nav div:hover
+        {
+            color: var(--primaryColor);
+        }
+
+@keyframes rotateIcon
+{
+0%{
+    transform: rotate(0deg);
+}
+50%{
+    transform: rotate(180deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+
+} 
+    

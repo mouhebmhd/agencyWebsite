@@ -1,0 +1,249 @@
+.pageContainer
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .container
+    {
+        width: 98%;
+        height: 95%;
+        background-color: #f0eeee;
+        border-radius:25px ;
+        display: grid;
+        grid-template-areas: 
+        "Component1 Component1"
+        "Cards Cards"
+        ;
+        /* column-gap: 10px;
+        row-gap: 10px; */
+        row-gap: 10px;
+        column-gap: 5px;
+        padding: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+     
+        
+    }
+        .cards
+        {
+            grid-area: Cards;
+            display: flex;
+            column-gap: 15px;
+            justify-content: center;
+        }
+        .component2,.component3
+        {
+            width: 40% !important;
+        }
+    .component1,.component2,.component3
+    {
+        border-radius: 25px;
+    }
+    .component1
+    {
+        grid-area: Component1;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+        .componentTitle
+        {
+           font-size: var(--textSize5);
+           font-weight: 600; 
+           width:40%;
+           text-align: center;
+        }
+        .componentText
+        {
+            font-size: var(--textSize2);
+            width: 75%;
+            text-align: center;
+        }
+        .componentPlan
+        {
+            display: flex;
+            column-gap: 15px;
+        }
+            /* .componentPlan div:first-child, .componentPlan div:nth-child(3) */
+/*             .componentPlan div:nth-child(2n+1) */
+            .componentPlan div:nth-child(odd) /*odd : impair , even : pair*/
+            {
+                font-size: var(--textSize4);
+                font-weight: 500;
+            }
+            .saveButton
+            {
+                background-color: #dcdcdc;
+                border: none;
+                font-size:14px;
+                font-weight: 600;
+            }
+                .toggle
+                {
+                    width: 60px;
+                    height: 30px;
+                    display: inline-block;
+                    position: relative;
+                }
+                input[type="checkbox"]
+                {
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                }
+                .glisser
+                {
+            
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #909090;
+                    transition: 1s;
+                }
+                .glisser::before
+                {
+                    position: absolute;
+                    content: "";
+                    height: 25px;
+                    width: 25px;
+                    left: 5px;
+                    bottom: 2.5px;
+                    background-color: #fff;
+                    transition: 1s;
+                }
+                input:checked + .glisser
+                {
+                    background-color:var(--primaryColor);
+                }
+                input:focus + .glisser 
+                {
+                    box-shadow: 0 0 1px #909090 ;
+                }
+                input:checked + .glisser::before
+                {
+                    transform: translateX(25px);
+                }
+                .rounded::before
+                {
+                    border-radius: 50%;
+                }
+                .rounded
+                {
+                    border-radius: 30px;
+                }
+
+
+
+
+    .component2,.component3
+    {
+        padding: 15px;
+        width: 80%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+ 
+        .boxTitle
+        {
+            font-size: var(--textSize4);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .boxDescription
+        {
+            color: #A8A8A8;
+        }
+        .boxPrice
+        {
+            font-size: var(--textSize2);
+        }
+        .boxPrice>span
+        {
+            font-size: var(--textSize4);
+            font-weight: 600;
+        }
+        .boxFeatures
+        {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+            .boxFeatures>.row
+            {
+                display: flex;
+                justify-content: space-around;
+            
+            }
+                .rowElement
+                {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+                    .elementText
+                    {
+                        font-weight: 500;
+                        color: #A8A8A8;
+                    }
+                    .iconContainer
+                    {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: var(--primaryColor);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                        .iconContainer>i 
+                        {
+                            font-size: var(--textSize2);
+                            color: #fff;
+                        }
+        .boxButton
+        {
+            display: flex;
+            justify-content: center;
+        } 
+          /*button style*/
+            .boxButton>button
+            {
+                background-color: var(--primaryColor);
+                padding: 10px;
+                border: none;
+                color: #fff;
+                width: 80%;
+                border-radius: 15px;
+            }
+            /*  3D effect */
+            .boxButton>button
+            {
+                border-width:6px; 
+                border-style: solid;
+                border-top-color:#6d6fff ;
+                border-bottom-color:#585ace  ;
+                border-left-color: #686afa ;
+                border-right-color: #585ace;
+            }
+            .component3 button
+            {
+                border: 1px solid var(--primaryColor);
+                background-color: #fff;
+                color: var(--primaryColor);
+            }
+            .component3 button:hover
+            {
+                background-color: var(--primaryColor);
+                color: #fff;
+            }
