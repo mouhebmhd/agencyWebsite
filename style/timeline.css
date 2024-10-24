@@ -78,3 +78,32 @@
                 top: 350px;
                 left: -50px;
             }
+            .pageTitle
+            {
+                animation-name: colorChange;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes colorChange {
+                0%
+                {
+                    color: #000;
+                }
+                25%
+                {
+                    color:#696bff;
+                }
+                50%
+                {
+                    color: #6163ee;
+                }
+                75%
+                {
+                    color: #5456c9;
+                }
+                100%
+                {
+                    color: #4b4db8;
+                }
+            }
